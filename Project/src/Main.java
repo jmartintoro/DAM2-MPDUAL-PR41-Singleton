@@ -1,19 +1,44 @@
+import java.io.IOException;
+import java.util.*;
+
+
 public class Main {
-    public static void main(String[] args){
 
-        
-        
-        PR430Objecte instance0 = PR430Objecte.getInstance("Joel", "Martin", "19");
-        System.out.println("Instant 0");
-        PR430Objecte instance1 = PR430Objecte.getInstance("Leo", "Messi", "35");
-        System.out.println("Instant 1");
-        PR430Objecte instance2 = PR430Objecte.getInstance("Cristiano", "Ronaldo", "38");
-        System.out.println("Instant 2");
 
-        System.out.println(instance0);
-        System.out.println(instance1);
-        System.out.println(instance2);
-        
+  static Scanner in = new Scanner(System.in); // System.in és global
 
+
+  // Main
+  public static void main(String[] args) throws InterruptedException, IOException {
+    boolean running = true;
+    while (running) {
+      String menu = "Escull una opció:";
+      menu = menu + "\n 0) PR430Main";
+      menu = menu + "\n 1) PR431Main";
+      // Adapta aquí les altres classes de l’exercici (PR432Main…)
+      menu = menu + "\n 100) Sortir";
+      System.out.println(menu);
+
+
+      int opcio = Integer.valueOf(llegirLinia("Opció:"));
+      try {
+        switch (opcio) {
+          case 0: PR430Main.main(args); break;
+          case 1: PR431Main.main(args); break;
+          // Adapta aquí les altres classes de l’exercici (PR432Main…)
+          case 100: running = false; break;
+          default: break;
+        }
+      } catch (Exception e) {
+          System.out.println(e);
+      }
     }
-} 
+    in.close();
+  }
+
+
+  static public String llegirLinia (String text) {
+    System.out.print(text);
+    return in.nextLine();
+  }
+}

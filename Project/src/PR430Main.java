@@ -1,8 +1,6 @@
 public class PR430Main {
     public static void main(String[] args){
 
-        
-        
         PR430Objecte instance0 = PR430Objecte.getInstance("Joel", "Martin", "19");
         System.out.println("Instant 0");
         PR430Objecte instance1 = PR430Objecte.getInstance("Leo", "Messi", "35");
@@ -14,6 +12,5 @@ public class PR430Main {
         System.out.println(instance1);
         System.out.println(instance2);
         
-
     }
 } 

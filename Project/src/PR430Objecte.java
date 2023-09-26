@@ -23,6 +23,6 @@ public class PR430Objecte {
 
     @Override
     public String toString() {
-        return "Nom: " + nom + "     cognom: " + cognom + "     edat: " + edat;
+        return "Nom: " + nom + "\t\tcognom: " + cognom + "\t\tedat: " + edat;
     }
 }
